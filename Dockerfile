@@ -1,4 +1,4 @@
-FROM steamcmd/steamcmd:debian-bookworm
+FROM steamcmd/steamcmd:latest
 
 COPY --chown=steam:steam entrypoint.sh /home/steam/entrypoint.sh
 RUN chmod +x /home/steam/entrypoint.sh
