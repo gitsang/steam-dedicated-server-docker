@@ -8,7 +8,10 @@ services:
     network_mode: host
     environment:
       APP_ID: 1948160
+      APP_INSTALL_DIR: /home/steam/ets2
     volumes:
-      - ./data:/data
+      - ./data/ets2:/home/steam/ets2
     command:
       - /bin/bash
+      - -c
+      - "while true; do sleep 1000; done"
