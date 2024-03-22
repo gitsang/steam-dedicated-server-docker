@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 APP_ID=$APP_ID
 APP_INSTALL_DIR=$APP_INSTALL_DIR
 
