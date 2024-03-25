@@ -2,5 +2,5 @@
 
 set -x
 
-cd /dstserver/bin
-./dontstarve_dedicated_server_nullrenderer
+cd /l4d2
+./srcds_run +exec /server.cfg

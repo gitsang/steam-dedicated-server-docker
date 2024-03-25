@@ -1,24 +1,24 @@
 version: "3.9"
 
 services:
-  dstserver:
+  l4d2:
     build: .
-    container_name: dstserver
+    container_name: l4d2
     restart: always
     network_mode: host
     environment:
-      APP_ID: 343050
-      APP_INSTALL_DIR: /dstserver
+      APP_ID: 222860
+      APP_INSTALL_DIR: /l4d2
       UPDATE: if_not_exist
     volumes:
       - steamcmd-volume:/root/.steam
-      - dstserver-volume:/dstserver
+      - l4d2-volume:/l4d2
       - ./start_server.sh:/start_server.sh
-      - ./Cluster_1:/root/.klei/DoNotStarveTogether/Cluster_1
-    working_dir: /dstserver/bin
+      - ./server.cfg:/server.cfg
+    working_dir: /l4d2
     command:
       - /start_server.sh
 
 volumes:
   steamcmd-volume:
-  dstserver-volume:
+  l4d2-volume:
