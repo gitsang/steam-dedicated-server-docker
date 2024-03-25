@@ -9,6 +9,7 @@ services:
     environment:
       APP_ID: 343050
       APP_INSTALL_DIR: /dstserver
+      UPDATE: if_not_exist
     volumes:
       - steamcmd-volume:/root/.steam
       - dstserver-volume:/dstserver
